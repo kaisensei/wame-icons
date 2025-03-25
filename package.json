@@ -1,11 +1,20 @@
 {
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.6",
+    "@storybook/addon-essentials": "^8.6.9",
+    "@storybook/addon-interactions": "^8.6.9",
+    "@storybook/addon-onboarding": "^8.6.9",
+    "@storybook/blocks": "^8.6.9",
+    "@storybook/react": "^8.6.9",
+    "@storybook/react-vite": "^8.6.9",
+    "@storybook/test": "^8.6.9",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "@vitest/ui": "^3.0.9",
     "jsdom": "^26.0.0",
+    "storybook": "^8.6.9",
     "typescript": "^5.8.2",
     "vitest": "^3.0.9"
   },
@@ -16,6 +25,8 @@
   },
   "scripts": {
     "test": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   }
 }
