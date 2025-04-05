@@ -1,11 +1,11 @@
 import { it, expect, describe } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import Calendar from "../../../src/common/Calendar"; // Changed import
+import Calendar from "/src/common/Calendar"; // Changed import
 import { SvgSize } from '/src/util';
 
 describe('Calendar Component', () => { // Changed describe block name
   it('renders correctly with default props', () => {
-    render(<Calendar></Calendar>); // Changed component
+    render(<Calendar />); // Changed component
     const svgElement = screen.getByRole('img');
     expect(svgElement).toBeInTheDocument();
     expect(svgElement).toHaveAttribute('class', '');
