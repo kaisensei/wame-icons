@@ -1,11 +1,11 @@
 import { it, expect, describe } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import Add from "../../../src/common/Add";
+import Add from "/src/common/Add";
 import { SvgSize } from '/src/util';
 
 describe('Add Component', () => {
   it('renders correctly with default props', () => {
-    render(<Add></Add>);
+    render(<Add />);
     const svgElement = screen.getByRole('img');
     expect(svgElement).toBeInTheDocument();
     expect(svgElement).toHaveAttribute('class', '');
