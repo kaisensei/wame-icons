@@ -1,4 +1,4 @@
-import { it, expect, describe } from 'vitest';
+import {expect, describe } from 'vitest';
 import { render } from '@testing-library/react';
 import Chat from './Chat';
 import { SvgSize } from '../util';
