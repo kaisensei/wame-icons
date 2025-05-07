@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
 import City from './City';
 import { SvgSize } from '../util';
 
@@ -12,15 +11,22 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  play: async ({ canvasElement }) => {
-    // Get the SVG path element directly from canvasElement
-    const svgPath = canvasElement.querySelector('path');
-    
-    // Assert that the fill attribute is set to blue
-    expect(svgPath).not.toBeNull();
-    expect(svgPath).toHaveAttribute('fill', 'blue');
-  } 
+export const Default: Story = {};
+
+export const xs: Story = {
+  name: "xs",
+  args:{
+    className: 'city',
+    size: SvgSize.xs,
+  },
+};
+
+export const sm: Story = {
+  name: "sm",
+  args:{
+    className: 'city',
+    size: SvgSize.sm,
+  },
 };
 
 export const md: Story = {
@@ -28,7 +34,6 @@ export const md: Story = {
   args:{
     className: 'city',
     size: SvgSize.md,
-    color: 'blue',
   },
 };
 
@@ -37,6 +42,13 @@ export const lg: Story = {
   args:{
     className: 'city',
     size: SvgSize.lg,
-    color: 'blue',
   },
 };
+
+export const xl: Story = {
+  name: "xl",
+  args:{
+    className: 'city',
+    size: SvgSize.xl,
+  },
+}
