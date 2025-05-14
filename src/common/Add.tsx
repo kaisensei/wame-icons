@@ -1,7 +1,7 @@
 import { SvgProps, SvgSize } from '../util';
 
 function Add({
-  className = '',
+  className = "fill-blue-500",
   size = SvgSize.md,
 }: SvgProps) {
   return (

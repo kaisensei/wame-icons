@@ -13,26 +13,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const xs: Story = {
-  name: "xs",
-  args:{
-    className: 'add',
-    size: SvgSize.xs,
-  },
-};
-
-export const sm: Story = {
-  name: "sm",
-  args:{
-    className: 'add',
-    size: SvgSize.sm,
-  },
-};
-
 export const md: Story = {
   name: "md",
   args:{
-    className: 'add',
+    className: "fill-blue-500",
     size: SvgSize.md,
   },
 };
@@ -40,15 +24,7 @@ export const md: Story = {
 export const lg: Story = {
   name: "lg",
   args:{
-    className: 'add',
+    className: "fill-blue-500",
     size: SvgSize.lg,
-  },
-};
-
-export const xl: Story = {
-  name: "xl",
-  args:{
-    className: 'add',
-    size: SvgSize.xl,
   },
 };
