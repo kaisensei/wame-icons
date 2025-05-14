@@ -1,7 +1,8 @@
 import { SvgProps, SvgSize } from '../util';
+import '../styles/tailwind.css'
 
 function City({
-  className = '',
+  className = "fill-blue-500",
   size = SvgSize.md,
 }: SvgProps) {
   return (
