@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, within} from '@storybook/test';
 import Add from './Add';
 import { SvgSize } from '../util';
 
@@ -13,26 +14,27 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const xs: Story = {
-  name: "xs",
+export const blue: Story = {
+  name:"blue",
   args:{
-    className: 'add',
-    size: SvgSize.xs,
+    className: "fill-blue-500",
   },
-};
+  play: async ({ canvasElement }) => {
+    // Get the SVG element
+    const svg= canvasElement.querySelector('svg'); 
 
-export const sm: Story = {
-  name: "sm",
-  args:{
-    className: 'add',
-    size: SvgSize.sm,
-  },
-};
+    if (!svg) {
+      throw new Error('SVG element not found');
+    }
+    // Check if the SVG has the blue class
+    expect(svg.classList.contains('fill-blue-500')).toBe(true);
+  }
+}
 
 export const md: Story = {
   name: "md",
   args:{
-    className: 'add',
+    className: "",
     size: SvgSize.md,
   },
 };
@@ -40,15 +42,7 @@ export const md: Story = {
 export const lg: Story = {
   name: "lg",
   args:{
-    className: 'add',
+    className: "",
     size: SvgSize.lg,
-  },
-};
-
-export const xl: Story = {
-  name: "xl",
-  args:{
-    className: 'add',
-    size: SvgSize.xl,
   },
 };

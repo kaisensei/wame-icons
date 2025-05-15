@@ -1,7 +1,7 @@
 import { SvgProps, SvgSize } from '../util';
 
 function Arena({
-  className = '',
+  className = "",
   size = SvgSize.md,
 }: SvgProps) {
   return (

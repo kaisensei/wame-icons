@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, within} from '@storybook/test';
-import Arena from './Arena';
+import City from './City';
 import { SvgSize } from '../util';
 
-const meta: Meta<typeof Arena> = {
-  title: "common/Arena",
-  component: Arena,
-}; 
+const meta: Meta<typeof City> = {
+  title: "common/City",
+  component: City,
+};
 
 export default meta;
 
@@ -29,7 +29,7 @@ export const blue: Story = {
     // Check if the SVG has the blue class
     expect(svg.classList.contains('fill-blue-500')).toBe(true);
   }
-};
+}
 
 export const md: Story = {
   name: "md",
@@ -44,5 +44,5 @@ export const lg: Story = {
   args:{
     className: "",
     size: SvgSize.lg,
-  }
+  },
 };
