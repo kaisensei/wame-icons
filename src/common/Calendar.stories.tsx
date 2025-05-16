@@ -13,21 +13,22 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const xs: Story = {
-  name: "xs",
+export const blue: Story = {
+  name:"blue",
   args:{
-    className: 'calendar',
-    size: SvgSize.xs,
+    className: "fill-blue-500",
   },
-};
+  play: async ({ canvasElement }) => {
+    // Get the SVG element
+    const svg= canvasElement.querySelector('svg'); 
 
-export const sm: Story = {
-  name: "sm",
-  args:{
-    className: 'calendar',
-    size: SvgSize.sm,
-  },
-};
+    if (!svg) {
+      throw new Error('SVG element not found');
+    }
+    // Check if the SVG has the blue class
+    expect(svg.classList.contains('fill-blue-500')).toBe(true);
+  }
+}
 
 export const md: Story = {
   name: "md",
@@ -44,11 +45,3 @@ export const lg: Story = {
     size: SvgSize.lg,
   },
 };
-
-export const xl: Story = {
-  name: "xl",
-  args:{
-    className: 'calendar',
-    size: SvgSize.xl,
-  },
-}
