@@ -1,4 +1,4 @@
-import {expect, describe } from 'vitest';
+import { expect, describe } from 'vitest';
 import { render } from '@testing-library/react';
 import Close from './Close';
 import { SvgSize } from '../util';
