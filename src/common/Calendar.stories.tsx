@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect } from '@storybook/test';
 import Calendar from './Calendar';
 import { SvgSize } from '../util';
 
