@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect } from '@storybook/test';
-import Chat from './Chat';
+import Collection from './Collection';
 import { SvgSize } from '../util';
 
-const meta: Meta<typeof Chat> = {
-  title: "common/Chat",
-  component: Chat,
+const meta: Meta<typeof Collection> = {
+  title: "common/Collection",
+  component: Collection,
 }; 
 
 export default meta;
@@ -34,7 +34,7 @@ export const blue: Story = {
 export const md: Story = {
   name: "md",
   args:{
-    className: 'chat',
+    className: '',
     size: SvgSize.md,
   },
 };
@@ -42,7 +42,7 @@ export const md: Story = {
 export const lg: Story = {
   name: "lg",
   args:{
-    className: 'chat',
+    className: '',
     size: SvgSize.lg,
   },
-};
+}

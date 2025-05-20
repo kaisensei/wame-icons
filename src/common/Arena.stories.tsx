@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, within} from '@storybook/test';
+import { expect } from '@storybook/test';
 import Arena from './Arena';
 import { SvgSize } from '../util';
 
