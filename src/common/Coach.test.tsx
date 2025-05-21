@@ -1,11 +1,11 @@
-import { expect, describe } from 'vitest';
+import {expect, describe } from 'vitest';
 import { render } from '@testing-library/react';
-import Calendar from './Calendar';
+import Coach from './Coach';
 import { SvgSize } from '../util';
 
-describe('Calendar component', () => {
+describe('Coach component', () => {
   test('renders with default props', () => {
-    const { container } = render(<Calendar />);
+    const { container } = render(<Coach />);
     const svgElement = container.querySelector('svg');
     expect(svgElement).toBeInTheDocument();
     expect(svgElement).toHaveAttribute('height', SvgSize.md.toString());
@@ -14,7 +14,7 @@ describe('Calendar component', () => {
 
   test('renders with specified size', () => {
     const customSize = SvgSize.lg;
-    render(<Calendar size={customSize} />);
+    render(<Coach size={customSize} />);
     
     const svgElement = document.querySelector('svg');
     expect(svgElement).toHaveAttribute('height', customSize.toString());
@@ -23,7 +23,7 @@ describe('Calendar component', () => {
 
   test('renders with positive decimal size', () => {
     const customSize = 1.5;
-    render(<Calendar size={customSize} />);
+    render(<Coach size={customSize} />);
     
     const svgElement = document.querySelector('svg');
     expect(svgElement).toHaveAttribute('height', customSize.toString());
@@ -32,7 +32,7 @@ describe('Calendar component', () => {
 
   test('renders with specified className', () => {
     const customClass = 'test-class';
-    render(<Calendar className={customClass} />);
+    render(<Coach className={customClass} />);
     
     const svgElement = document.querySelector('svg');
     expect(svgElement).toHaveClass(customClass);
