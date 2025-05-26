@@ -5,8 +5,8 @@ import { SvgSize } from '../util';
 
 describe('Edit component', () => {
   test('renders with default props', () => {
-    const { container } = render(<Edit />);
-    const svgElement = container.querySelector('svg');
+    render(<Edit />);
+    const svgElement = document.querySelector('svg');
     expect(svgElement).toBeInTheDocument();
     expect(svgElement).toHaveAttribute('height', SvgSize.md.toString());
     expect(svgElement).toHaveAttribute('width', SvgSize.md.toString());
