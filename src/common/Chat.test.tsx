@@ -5,8 +5,8 @@ import { SvgSize } from '../util';
 
 describe('Chat component', () => {
   test('renders with default props', () => {
-    const { container } = render(<Chat />);
-    const svgElement = container.querySelector('svg');
+    render(<Chat />);
+    const svgElement = document.querySelector('svg');
     expect(svgElement).toBeInTheDocument();
     expect(svgElement).toHaveAttribute('height', SvgSize.md.toString());
     expect(svgElement).toHaveAttribute('width', SvgSize.md.toString());
