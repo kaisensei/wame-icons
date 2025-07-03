@@ -4,7 +4,7 @@ import Football from './Football';
 import { SvgSize } from '../../../util';
 
 const meta: Meta<typeof Football> = {
-  title: "common/Football",
+  title: "interests/sports/interests/Football",
   component: Football,
 };
 
