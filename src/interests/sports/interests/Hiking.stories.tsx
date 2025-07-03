@@ -4,7 +4,7 @@ import Hiking from './Hiking';
 import { SvgSize } from '../../../util';
 
 const meta: Meta<typeof Hiking> = {
-  title: "common/Hiking",
+  title: "interests/sports/interests/Hiking",
   component: Hiking,
 };
 
