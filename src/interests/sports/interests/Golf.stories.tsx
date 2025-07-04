@@ -4,7 +4,7 @@ import Golf from './Golf';
 import { SvgSize } from '../../../util';
 
 const meta: Meta<typeof Golf> = {
-  title: "common/Golf",
+  title: "interests/sports/interests/Golf",
   component: Golf,
 };
 
