@@ -5,8 +5,8 @@ import { SvgSize } from '../util';
 
 describe('City component', () => {
   test('renders with default props', () => {
-    const { container } = render(<City />);
-    const svgElement = container.querySelector('svg');
+    render(<City />);
+    const svgElement = document.querySelector('svg');
     expect(svgElement).toBeInTheDocument();
     expect(svgElement).toHaveAttribute('height', SvgSize.md.toString());
     expect(svgElement).toHaveAttribute('width', SvgSize.md.toString());
