@@ -5,8 +5,8 @@ import { SvgSize } from '../util';
 
 describe('Coach component', () => {
   test('renders with default props', () => {
-    const { container } = render(<Coach />);
-    const svgElement = container.querySelector('svg');
+    render(<Coach />);
+    const svgElement = document.querySelector('svg');
     expect(svgElement).toBeInTheDocument();
     expect(svgElement).toHaveAttribute('height', SvgSize.md.toString());
     expect(svgElement).toHaveAttribute('width', SvgSize.md.toString());
