@@ -5,8 +5,8 @@ import { SvgSize } from '../util';
 
 describe('Collapse component', () => {
   test('renders with default props', () => {
-    const { container } = render(<Collapse />);
-    const svgElement = container.querySelector('svg');
+    render(<Collapse />);
+    const svgElement = document.querySelector('svg');
     expect(svgElement).toBeInTheDocument();
     expect(svgElement).toHaveAttribute('height', SvgSize.md.toString());
     expect(svgElement).toHaveAttribute('width', SvgSize.md.toString());
